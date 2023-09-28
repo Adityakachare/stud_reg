@@ -1,0 +1,121 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Column layout for header and content */
+    align-items: center;
+    min-height: 100vh;
+    /* Ensure the body takes up the full viewport height */
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    /* Increase the width to 90% of the screen */
+    margin-top: 20px;
+}
+
+#registrationForm,
+#displayArea {
+    background-color: #fff;
+    width: 49%;
+    /* Each section occupies slightly less than half of the screen width */
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
+    /* Allow sections to expand to fill available space */
+}
+
+/* Add spacing between form section and details section */
+#displayArea {
+    margin-left: 10px;
+    /* Adjust the margin to control the spacing */
+}
+
+#registrationForm label,
+#displayArea h2 {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Style text inputs */
+#registrationForm input[type="text"],
+#registrationForm input[type="email"],
+#registrationForm input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style radio buttons and checkboxes beside each other */
+#registrationForm input[type="radio"]+label,
+#registrationForm input[type="checkbox"]+label {
+    display: inline-block;
+    margin-right: 10px;
+    /* Add spacing between them */
+    vertical-align: middle;
+    /* Align checkbox and radio button content vertically */
+}
+
+/* Style buttons to be centered */
+#registrationForm .button-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Display buttons vertically centered */
+    align-items: center;
+    /* Horizontally center the buttons */
+}
+
+#registrationForm input[type="button"],
+#registrationForm input[type="reset"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+    /* Add spacing between buttons and other elements */
+    width: auto;
+    /* Reset button width to auto (default) */
+}
+
+/* Add spacing between buttons */
+#registrationForm input[type="button"]+input[type="reset"] {
+    margin-left: 10px;
+    /* Adjust the margin to control the spacing between buttons */
+}
+
+#registrationForm input[type="button"]:hover,
+#registrationForm input[type="reset"]:hover {
+    background-color: #0056b3;
+}
